@@ -1,11 +1,14 @@
+TODO: 
+ - miten saadaan laskettua arvoselun tähdet ratingiing? kun ryötetään arvostelu päivitetään ratinging solu wmovie taulusta?
+ - vaihda salasana mysqlään (vaikeempi joku 20 merkkiä) q4mXWrzG7fXR4VH21E3s
+
 CREATE TABLE wmovie(
  MOVIEID INT,
  NAME CHAR(30),
  YEAR INT,
  DIRECTOR CHAR(20),
  GENRE CHAR(15),
- DESCRIPTION CHAR(400),
- RATING INT,
+ DESCRIPTION TEXT(500),
  PRIMARY KEY(MOVIEID)
  
 );
@@ -16,8 +19,7 @@ INSERT INTO wmovie VALUES(
 	2012,
 	'Rich Moore', 
 	'Animaatio',
-	'Fix-It Felix on suosittu peli josta Felix saa kunniaa voitostaan. Videopelin pahis on kyllästynyt asemaansa ja haluaa olla kerrankin sankari ja ansaita mitallin kuten Felix. Räyhä-Ralphin sankari-matkalle tulee kuitenkin yllättäviä mutkia matkaan',
-	5
+	'Fix-It Felix on suosittu peli josta Felix saa kunniaa voitostaan. Videopelin pahis on kyllästynyt asemaansa ja haluaa olla kerrankin sankari ja ansaita mitallin kuten Felix. Räyhä-Ralphin sankari-matkalle tulee kuitenkin yllättäviä mutkia matkaan'
 );
 
 INSERT INTO wmovie VALUES(
@@ -26,8 +28,7 @@ INSERT INTO wmovie VALUES(
 	2014,
 	'Robert Stromberg', 
 	'Seikkailu',
-	'Tunnetun Prinsessa Ruususen tarina uudelleen kerrottuna, mutta toisesta näkökulmasta.',
-	4
+	'Tunnetun Prinsessa Ruususen tarina uudelleen kerrottuna, mutta toisesta näkökulmasta.'
 );
 
 INSERT INTO wmovie VALUES(
@@ -36,8 +37,7 @@ INSERT INTO wmovie VALUES(
 	2008,
 	'Kim Jin-young', 
 	'Komedia',
-	'Ongelmallinen lukiolaispoika saa yllätyksekseen vauvan hoteisiinsa. Mukana tulleessa lapussa sanotaan että hän on lapsen isä. Vanhemamt ovat matkoilla joten heistä ei ainakaan ole avuksi lasten hoitamiseen näin ensihätään.',
-	3
+	'Ongelmallinen lukiolaispoika saa yllätyksekseen vauvan hoteisiinsa. Mukana tulleessa lapussa sanotaan että hän on lapsen isä. Vanhemmat ovat matkoilla joten heistä ei ainakaan ole avuksi lasten hoitamiseen näin ensihätään.'
 );
 
 INSERT INTO wmovie VALUES(
@@ -46,27 +46,17 @@ INSERT INTO wmovie VALUES(
 	1990,
 	'Chris Columbus', 
 	'Komedia',
-	'Nuoripoika Kevin unohtuu jouluksi kotiin, kun muu suku matkaavat Ranskaan. Kevin pitää tilanteesta ja ottaa ilon irti. Lisäski kaksi tumpeloa murtovarasta ovat ottaneen Kevinin kodin kohteekseen.',
-	5
+	'Nuoripoika Kevin unohtuu jouluksi kotiin, kun muu suku matkaavat Ranskaan. Kevin pitää tilanteesta ja ottaa ilon irti. Lisäski kaksi tumpeloa murtovarasta ovat ottaneen Kevinin kodin kohteekseen.'
 );
+
 
 
 CREATE TABLE wreview(
  MOVIE INT,
  AUTHOR CHAR(30),
- COMMENT CHAR(150),
+ COMMENT CHAR(250),
  STARS INT,
  DAY DATE,
  PRIMARY KEY(AUTHOR, MOVIE),
  FOREIGN KEY(MOVIE) REFERENCES wmovie(MOVIEID)
-);
-
-jostain syystä tää ei toimi:
-
-INSERT INTO wreview VALUES(
-	111, 
-	'kaisa'
-	'director was so good in this movie', 
-	4,
-	2014-01-01
 );
