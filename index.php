@@ -33,7 +33,7 @@ include_once('head.php');
 					<h5>Julkaisu vuosi: <?php print_r ($movies[$i][YEAR]); ?></h5>
 					<h5>Genre: <?php print_r ($movies[$i][GENRE]); ?></h5>
 					
-					<?php include 'sqlfuncs/stars.php'; 	?><!-- counting stars -->
+					<?php include 'sqlfuncs/stars.php'; ?><!-- counting stars -->
 					<h5>Arvosana: <?php echo $result ;?> / 5 </h5>
 					
 					<div class="descriptionBox">
