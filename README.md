@@ -16,4 +16,5 @@
 * sqlfuncs -kansiossa on kaikki tietokantahakuihin liittyvät osat
 * styles -kansiossa luonnollisesti .css
 * kaksi sivua: index.php ja search.php
-
+* head.php sisältää alkumäärittelyt sivujen alkuun
+* reviewform.php sisältää formin jolla voi lisätä arvostelun tietokantaan
