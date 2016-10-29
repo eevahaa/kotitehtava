@@ -1,9 +1,9 @@
 <?php
 //Connection to the database, used PDO
 $host='mysql.metropolia.fi'; 
-$dbname='eevaih';
-$user='eevaih';
-$pass='q4mXWrzG7fXR4VH21E3s';
+$dbname='example';
+$user='example';
+$pass='8759823fjfjjfj';
 
 
 //Creating a new DBH-object
